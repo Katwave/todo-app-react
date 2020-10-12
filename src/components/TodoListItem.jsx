@@ -3,8 +3,6 @@ import { useState } from "react";
 import TodoDiv from "./TodoDiv";
 
 export default function TodoListItem({ todoItems, setTodoItems }) {
-  const onAnimationEnd = () => {};
-
   return (
     <div>
       <ul className="todoList">

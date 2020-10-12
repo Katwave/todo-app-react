@@ -1,16 +1,44 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 
 export default function TodoDiv(props) {
   // variables
 
-  const [checked, getChecked] = useState(props.completed);
+  const [checked, getChecked] = useState(false);
   const [delete_todo, getDeleteTodo] = useState(false);
+
+  // Use Effect
+  // Use effect
+  useEffect(() => {
+    saveToLocalStorage();
+  }, [props.todoItems, checked]);
 
   //   Functions
 
+  // save todos to local storage
+  const saveToLocalStorage = () => {
+    if (localStorage.getItem("todo-items") === null) {
+      localStorage.setItem("todo-items", []);
+    } else {
+      localStorage.setItem("todo-items", JSON.stringify(props.todoItems));
+    }
+  };
+
   const checkButton = () => {
     getChecked(!checked);
+    props.setTodoItems(
+      props.todoItems.map((el) => {
+        if (el._id === props.todo._id) {
+          return {
+            ...el,
+            completed: !el.completed,
+          };
+        } else {
+          return el;
+        }
+      })
+    );
   };
 
   //   Delete the todo div
@@ -33,6 +61,7 @@ export default function TodoDiv(props) {
           }
         >
           {props.name}
+          {window.addEventListener("load", () => {})}
         </li>
 
         <button onClick={checkButton}>

@@ -134,7 +134,7 @@
   padding: 10px;
   font-size: 22px;
   cursor: pointer;
-  color: #ddd;
+  color: #fff;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
@@ -213,7 +213,7 @@
   padding: 10px;
   font-size: 22px;
   cursor: pointer;
-  color: #ddd;
+  color: #fff;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
