@@ -13,7 +13,7 @@ export default function Todo() {
         setTodoItems={setTodoItems}
         todoItems={todoItems}
       />
-      <TodoItem todoItems={todoItems} />
+      <TodoItem setTodoItems={setTodoItems} todoItems={todoItems} />
     </div>
   );
 }

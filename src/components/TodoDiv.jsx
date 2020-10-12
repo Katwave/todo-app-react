@@ -16,6 +16,10 @@ export default function TodoDiv(props) {
   //   Delete the todo div
   const delete_todo_button = () => {
     getDeleteTodo(true);
+
+    props.setTodoItems(
+      props.todoItems.filter((el) => el._id !== props.todo._id)
+    );
   };
 
   return (
