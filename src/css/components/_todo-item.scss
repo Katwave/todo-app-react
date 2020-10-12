@@ -1,0 +1,41 @@
+.todo-item-container {
+  background: transparent;
+  width: 100%;
+  margin-top: 5%;
+  min-height: 50vh;
+  @include flexCenter(column);
+  justify-content: flex-start;
+
+  .todoList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .todo-item {
+      @include flexCenter(row);
+      margin-top: 10px;
+      background: #fff;
+      min-width: 250px;
+      @include shadows();
+      li {
+        flex: 1;
+        padding: 8px;
+      }
+      .checked {
+        opacity: 0.6;
+      }
+      button {
+        @include buttons();
+        &:nth-child(2) {
+          background: rgb(49, 170, 2);
+          &:hover {
+            background: rgb(44, 151, 2);
+          }
+        }
+      }
+    }
+    .delete-todo {
+      display: none;
+    }
+  }
+}

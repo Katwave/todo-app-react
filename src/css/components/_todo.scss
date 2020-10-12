@@ -1,0 +1,19 @@
+.todo {
+  margin-top: 5%;
+  background: transparent;
+  @include flexCenter(column);
+
+  .add-todo {
+    @include flexCenter(row);
+    background: transparent;
+    form {
+      display: flex;
+    }
+    input {
+      @include inputs();
+    }
+    button {
+      @include buttons();
+    }
+  }
+}

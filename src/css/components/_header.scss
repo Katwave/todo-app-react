@@ -1,0 +1,31 @@
+.header {
+  min-height: 20vh;
+  width: 100%;
+  background: #fff;
+  @include headerShadow();
+  @include flexCenter(column);
+
+  h1 {
+    @include gradient();
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .nav {
+    width: 100%;
+    background: transparent;
+    @include flexCenter(row);
+    a {
+      display: inline-flex;
+      margin: 8px;
+      padding: 10px 16px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #000;
+      transition: all 300ms ease-in-out;
+      &:hover {
+        color: $gradientColor1;
+      }
+    }
+  }
+}

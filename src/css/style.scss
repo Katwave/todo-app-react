@@ -1,0 +1,81 @@
+// Variables
+$gradientColor1: #654ea3;
+$gradientColor2: #eaafc8;
+
+// Mixins
+@mixin gradient() {
+  background: linear-gradient(to right, $gradientColor1, $gradientColor2);
+}
+
+// Shadow
+@mixin shadows {
+  box-shadow: 3px 3px 24px rgba(0, 0, 0, 0.5);
+}
+
+// Shadow for the header
+@mixin headerShadow {
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
+}
+
+@mixin flexCenter($dir) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $dir;
+}
+
+@mixin inputs {
+  width: 600px;
+  height: 42px;
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 22px;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+  }
+  @media screen and (max-width: 900px) {
+    width: 400px;
+  }
+}
+
+@mixin buttons {
+  width: 50px;
+  height: 42px;
+  background: $gradientColor1;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #ddd;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    background: #56428b;
+  }
+}
+
+// Imports
+@import "./components/header";
+@import "./components/todo";
+@import "./components/todo-item";
+
+// Default styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background: #ddd;
+}
