@@ -11,14 +11,16 @@ export default function AddTodo(props) {
   };
 
   const add_todo_button = (e) => {
-    props.setTodoItems([
-      ...props.todoItems,
-      {
-        name: props.inputText,
-        completed: false,
-        _id: Math.random() * 1000000,
-      },
-    ]);
+    if (props.inputText.trim() !== "") {
+      props.setTodoItems([
+        ...props.todoItems,
+        {
+          name: props.inputText,
+          completed: false,
+          _id: Math.random() * 1000000,
+        },
+      ]);
+    }
     e.preventDefault();
     props.setInputText("");
   };
