@@ -5,10 +5,9 @@ import { useState } from "react";
 export default function TodoDiv(props) {
   // variables
 
-  const [checked, getChecked] = useState(false);
+  const [checked, getChecked] = useState(props.completed);
   const [delete_todo, getDeleteTodo] = useState(false);
 
-  // Use Effect
   // Use effect
   useEffect(() => {
     saveToLocalStorage();

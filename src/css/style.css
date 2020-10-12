@@ -1,5 +1,7 @@
 .header {
-  min-height: 20vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background: #fff;
   -webkit-box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
@@ -17,6 +19,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 100;
 }
 
 .header h1 {
@@ -93,7 +96,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background: transparent;
+  background: red;
+  top: 0%;
+  left: 0;
+  margin-top: 5%;
 }
 
 .todo .add-todo form {
