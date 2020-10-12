@@ -11,7 +11,7 @@ export default function TodoDiv(props) {
   // Use effect
   useEffect(() => {
     saveToLocalStorage();
-  }, [props.todoItems, checked]);
+  }, [props.todoItems, checked, delete_todo]);
 
   //   Functions
 
@@ -60,7 +60,6 @@ export default function TodoDiv(props) {
           }
         >
           {props.name}
-          {window.addEventListener("load", () => {})}
         </li>
 
         <button onClick={checkButton}>
